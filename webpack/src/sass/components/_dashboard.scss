@@ -1,0 +1,139 @@
+.dashboard {
+  display: block;
+
+
+.dashboard__header {
+  display: flex;
+  justify-content: space-between;
+  color: #323232;
+  margin: 34px 0 25px 0;
+}
+
+.dashboard__header_sort {
+  font-size: 13px;
+  line-height: 20px;
+
+  span {
+    padding-left: 11px;
+    opacity: .5;
+  }
+}
+
+.dashboard__header_checkbox {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dashboard__essence {
+  background: #FEF9F4;
+  color: #323232;
+  margin-bottom: 40px;
+  border: 1px solid rgba(204, 0, 51, 0.15);
+  border-radius: 4px;
+}
+
+.dashboard__essence_body {
+  padding: 29px 42px 22px 42px;
+}
+
+.dashboard__essence_body-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  span:last-of-type {
+  font-size: 13px;
+  line-height: 20px;
+  color: #989EA7;
+  }
+}
+
+.dashboard__essence_body-type-name {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.75px;
+  color: #596472;
+  border: 2px solid #596472;
+  box-sizing: border-box;
+  border-radius: 60px;
+  padding: 5px 10px 5px 10px;
+}
+
+.dashboard__essence_body-text {
+  font-size: 14px;
+  line-height: 24px;
+  //text-transform: capitalize;
+  color: #323232;
+  margin-bottom: 51px;
+}
+
+.dashboard__essence_body-dates {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 20px;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.base-date {
+  color: #175AAE;
+}
+.critical {
+  background: #F8F1F2;
+}
+.critical-date {
+  color: #DC112E !important;
+}
+
+.checkbox {
+  @include checkbox;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 0 31px 0 25px;
+}
+
+label:last-of-type {
+  padding-right: 0;
+}
+
+#dash-time, #dash-prior {
+  cursor: pointer;
+}
+
+.dashboard__header_sort-type_active {
+  font-weight: 500;
+  opacity: 1 !important;
+}
+
+//adaptive
+
+@media all and (max-width: 575px) {
+  .dashboard__header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .dashboard__header_sort {
+    font-size: 16px;
+    margin-bottom: 17px;
+  }
+  .dashboard__essence_body-type {
+    flex-wrap: wrap;
+  }
+  .dashboard__essence_body-type-name {
+    margin-bottom: 10px;
+  }
+  .checkbox {
+    line-height: 23px;
+    padding: 0 31px 0 30px;
+  }
+  .dashboard__essence_body-dates {
+    flex-wrap: wrap;
+  }
+}
+}

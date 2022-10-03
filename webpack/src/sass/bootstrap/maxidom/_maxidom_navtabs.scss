@@ -1,0 +1,195 @@
+.order-form {
+  .nav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background: #f6f6f6;
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      padding: 0 16px;
+      position: relative;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        bottom:0;
+        width: 16px;
+        height: 1px;
+        background: #E9EBED;
+        //background: red;
+        z-index: 95;
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+      }
+    }
+  }
+
+  .nav-link {
+    display: block;
+    outline: none !important;
+    // padding: $nav-link-padding-y $nav-link-padding-x;
+    padding: 16px 28px 17px 20px;
+    cursor: pointer;
+    @include media-breakpoint-down(sm) {
+      padding: 16px 0 17px 0;
+    }
+
+    @include hover-focus {
+      text-decoration: none;
+    }
+
+    // Disabled state lightens text
+    &.disabled {
+      color: $nav-link-disabled-color;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  //
+  // Tabs
+  //
+
+  .nav-tabs {
+    // border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+    .nav-item {
+      //margin-bottom: -$nav-tabs-border-width;
+      border: none;
+      outline: none;
+      @include media-breakpoint-down(sm) {
+        flex-grow: 1;
+      }
+    }
+
+    .nav-link {
+      border: $nav-tabs-border-width solid transparent;
+      @include media-breakpoint-down(sm) {
+        border-bottom: $nav-tabs-border-width solid #E9EBED;
+      }
+      color: #596472;
+      font-size: 16px;
+      line-height: 20px;
+      @include border-top-radius($nav-tabs-border-radius);
+
+      @include hover-focus {
+        //border-color: $nav-tabs-link-hover-border-color;
+      }
+
+      &.disabled {
+        color: $nav-link-disabled-color;
+        background-color: transparent;
+        border-color: transparent;
+      }
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
+      .icon-truck {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+      .icon-location {
+        width: 18px;
+        height: 24px;
+        margin-right: 8px;
+      }
+
+      &:hover {
+        color: #000000;
+      }
+    }
+
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      color: #000000;
+      background-color: #FFF;
+      border-color:   #E9EBED;
+      display: block;
+      position: relative;
+      //border-bottom: 2px solid #ffffff;
+      &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        bottom: -2px;
+        left: 0;
+        z-index: 10;
+        @include media-breakpoint-down(sm) {
+          bottom: -1px;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      // Make dropdown border overlap tab border
+      margin-top: -$nav-tabs-border-width;
+      // Remove the top rounded corners here since there is a hard edge above the menu
+      @include border-top-radius(0);
+    }
+  }
+
+
+  //
+  // Pills
+  //
+
+  .nav-pills {
+    .nav-link {
+      @include border-radius($nav-pills-border-radius);
+    }
+
+    .nav-link.active,
+    .show > .nav-link {
+      color: $nav-pills-link-active-color;
+      background-color: $nav-pills-link-active-bg;
+    }
+  }
+
+
+  //
+  // Justified variants
+  //
+
+  .nav-fill {
+    .nav-item {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+  }
+
+  .nav-justified {
+    .nav-item {
+      flex-basis: 0;
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+
+  // Tabbable tabs
+  //
+  // Hide tabbable panes to start, show them when `.active`
+
+  .tab-content {
+    > .tab-pane {
+      display: none;
+    }
+    > .active {
+      display: block;
+    }
+  }
+}
+
+.active > .icon {
+  fill: #861A22 !important;
+}
+.nav-link:hover > .icon {
+  fill: #861A22 !important;
+}

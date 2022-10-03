@@ -1,0 +1,201 @@
+.new2022__mag-tabs {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-start;
+  @media (max-width: 1140px) {
+    margin-left: 19px;
+  }
+  .new2022__mag-tabs-item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #969696;
+    margin-right: 30px;
+    cursor: pointer;
+    white-space: nowrap;
+    &.not_active {
+      &:hover {
+        color: #B6B3B3;
+      }
+    }
+    @media (max-width: 1140px) {
+      font-size: 14px;
+      margin-right: 13px;
+    }
+    @media (max-width: 380px) {
+      font-size: 12px;
+    }
+    @media (max-width: 340px) {
+      font-size: 11px;
+    }
+  }
+  .new2022__mag-tabs-item_all {
+    margin-left: auto;
+    margin-right: 0;
+    background-image: url("/local/templates/maxi2020/img/nm22_article_quotes.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 25px;
+    &:hover {
+      background-image: url("/local/templates/maxi2020/img/nm22_article_quotes_active.png");
+    }
+    a {
+      color: #175AAE;
+      text-decoration: none;
+      &:hover {
+        color: #196BD1;
+        text-decoration: underline;
+      }
+    }
+    @media (max-width: 1140px) {
+      display: none;
+    }
+  }
+  .new2022__mag-tabs-item_checked {
+    color: #175AAE;
+    &:hover {
+      color: #196BD1;
+    }
+  }
+}
+.new2022__mag-tabs-item_all-mobile {
+  display: none;
+  a {
+    text-decoration: underline;
+    @media (max-width: 1140px) {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: #175AAE;
+    }
+  }
+  @media (max-width: 1140px) {
+    display: flex;
+    margin-left: 19px;
+    margin-top: 25px;
+  }
+  @media (max-width: 600px) {
+    margin-top: 10px;
+  }
+}
+.new2022__mag-article {
+  position: relative;
+  margin-top: 25px;
+  @media (max-width: 1140px) {
+    margin-left: 19px;
+  }
+  .new2022__mag-article-item {
+    width: 360px !important;
+    height: 327px;
+    @media (max-width: 1140px) {
+      width: 280px !important;
+      height: 286px;
+    }
+    @media (max-width: 770px) {
+      width: 223px !important;
+      height: 239px;
+    }
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+      .new2022__mag-article-item-text {
+        p {
+          color: #175AAE;
+        }
+      }
+    }
+  }
+  .new2022__mag-article-item-pic {
+    width: 360px;
+    height: 213px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    //background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    &.new2022__mag-article-item-pic-review {
+      background-image: url("/local/templates/maxi2020/img/nm22_mag.png");
+    }
+    &.new2022__mag-article-item-pic-advice {
+      background-image: url("/local/templates/maxi2020/img/nm22_mag1.png");
+    }
+    &.new2022__mag-article-item-pic-choice {
+      background-image: url("/local/templates/maxi2020/img/nm22_mag2.png");
+    }
+    @media (max-width: 1140px) {
+      width: 280px;
+      height: 166px;
+    }
+    @media (max-width: 770px) {
+      width: 223px;
+      height: 136px;
+    }
+  }
+  .new2022__mag-article-item-text {
+    width: 290px;
+    height: 115px;
+    @media (max-width: 770px) {
+      width: 215px;
+      height: 100px;
+    }
+    h1 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: #175AAE;
+      padding-top: 20px;
+      @media (max-width: 770px) {
+        font-size: 12px;
+        padding-top: 15px;
+      }
+    }
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.25px;
+      color: #363535;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-clamp: 3;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      @media (max-width: 770px) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+  .new2022__outleft {
+    display: none;
+    background-image: url("/local/templates/maxi2020/img/nm22_arrowleft.svg");
+    left: -5%;
+    &:hover {
+      background-image: url("/local/templates/maxi2020/img/nm22_arrowleft-hover.svg");
+    }
+  }
+  .new2022__outright {
+    background-image: url("/local/templates/maxi2020/img/nm22_arrowright.svg");
+    right: -5%;
+    &:hover {
+      background-image: url("/local/templates/maxi2020/img/nm22_arrowright-hover.svg");
+    }
+  }
+}
+.new2022__outright-mag {
+  top: 27%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  cursor: pointer;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  @media (max-width: 1140px) {
+    display: none !important;
+  }
+}

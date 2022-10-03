@@ -1,0 +1,105 @@
+//@import "fonts";
+//@import "variables";
+//@import "bootstrap/bootstrap";
+//@import "components/header__old";
+//@import "components/header";
+//@import "components/order-form";
+//@import "components/mobile-menu";
+//@import "components/kitchens";
+//@import "components/kitchen-detail";
+//@import "components/forms";
+//@import "components/feedback";
+//@import "components/activation-card";
+//@import "components/cart";
+//@import "components/dashboard";
+//@import "components/design-reg";
+//@import "libs/swiper-bundle";
+//@import "components/product-card";
+//@import "components/article";
+//@import "libs/vue-range-slider";
+//@import "components/newcatalog2022";
+//@import "components/pages";
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.main_form {
+  display: flex;
+  margin: 0 auto;
+  width: 1140px;
+  flex-direction: column;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.main_form__logo {
+  margin: 53px 0 112px 0;
+}
+
+.main_form__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.main_form__text {
+  width: 37%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  color: #838A92;
+}
+
+.main_form__group_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 39px 0 40px 0;
+  input {
+    padding-left: 10px;
+    width: 343px;
+    height: 56px;
+    border: 1px solid #DADADA;
+    border-radius: 4px;
+  }
+  input:nth-child(-n+2) {
+    margin-bottom: 32px;
+  }
+}
+
+.main_form__group_button {
+  display: flex;
+  flex-direction: column;
+  button {
+    //padding: 16px 118px;
+    width: 360px;
+    height: 56px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 10px;
+    border: 2px solid #CC2035;
+  }
+
+  button:nth-child(-n+1) {
+    margin-bottom: 24px;
+  }
+}
+
+.main_form__group_button_interview {
+  background: #CC2035;
+  color: #FFFFFF;
+  border: 2px solid #CC2035;
+}
+
+.main_form__group_button_download {
+  background: #FFFFFF;
+  color: #CC2035;
+}

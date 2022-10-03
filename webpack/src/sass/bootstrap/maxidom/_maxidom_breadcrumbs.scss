@@ -1,0 +1,95 @@
+.breadcrumbs {
+    // height: 22px;
+    display: inline-block;
+    margin-bottom: 9px;
+    padding: 0px 9px 0px 0px;
+    //border: 1px solid #D9DCDF;
+    //@include media-breakpoint-down(md) {
+    //    border: none;
+    //}
+    box-sizing: border-box;
+    border-radius: 4px;
+    .breadcrumbs__nav {
+        display: flex;
+        .breadcrumbs__ol {
+            display: inline-flex;
+            margin-bottom: 0;
+            padding-left: 0;
+            flex-wrap: wrap;
+            
+            list-style: none;
+            background-color: transparent;
+            
+            
+            font-size: 12px;
+            line-height: 12px;
+        }
+        .breadcrumb__home-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-top: -6px;
+            margin-left: 0;
+            margin-right: 4px;
+            fill: #DC112E;
+            @include media-breakpoint-down(md) { 
+              width: 22px;
+              height: 22px;
+              margin-top: -6px;
+              margin-bottom: -5px;
+              fill: #596472;
+            }
+        }
+    }
+
+  .breadcrumbs__link {
+    color: #596472;
+    @include media-breakpoint-down(md) { 
+       text-decoration: underline;
+    }
+  }
+  .breadcrumbs__item {
+      position: relative;
+      padding-top: 9px;
+      padding-bottom: 7px;
+    // The separator between breadcrumbs (by default, a forward-slash: "/")
+    + .breadcrumbs__item {
+      padding-left: 20px;
+        
+      &::before {
+        position: absolute;
+        display: block; // Suppress underlining of the separator in modern browsers
+        left: 6px;
+        top: 12px;
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid #818181;
+        border-top: 2px solid #818181;
+        transform: rotate(45deg);
+        content:'';
+      }
+    }
+  
+    // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+    // without `<ul>`s. The `::before` pseudo-element generates an element
+    // *within* the .breadcrumbs__item and thereby inherits the `text-decoration`.
+    //
+    // To trick IE into suppressing the underline, we give the pseudo-element an
+    // underline and then immediately remove it.
+    + .breadcrumbs__item:hover::before {
+      text-decoration: underline;
+    }
+    // stylelint-disable-next-line no-duplicate-selectors
+    + .breadcrumbs__item:hover::before {
+      text-decoration: none;
+    }
+  
+    &.active {
+      color: #DC112E;
+      @include media-breakpoint-down(md) { 
+        color: #861A22;
+        text-decoration: underline;
+     }
+    }
+  }
+}

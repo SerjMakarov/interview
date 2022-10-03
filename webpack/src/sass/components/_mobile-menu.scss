@@ -1,0 +1,159 @@
+// required styles
+
+.slinky-menu {
+  //overflow: hidden;
+  transform: translateZ(0);
+
+  > ul {
+    left: 0;
+    position: relative;
+    transform: translateZ(0);
+  }
+
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  ul {
+    width: 100%;
+  }
+  li {
+    border-bottom: 1px solid #eeeeee;
+  }
+  a {
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    span {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+      line-height: 1.4;
+      font-size: 13px;
+      img {
+        margin-right: 10px;
+      }
+      .catalog__icon {
+        height: 25px;
+        width: 25px;
+        margin-right: 13px;
+      }
+      .icon-brands {
+        fill: #dc112e;
+      }
+    }
+  }
+
+  li ul {
+    display: none;
+    left: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .header {
+    //.title {
+    //  flex: 1;
+    //  line-height: 1.4;
+    //  margin: 0;
+    //  order: 1;
+    //}
+    .back {
+      line-height: 1.4;
+      color: #333;
+      padding: 1em;
+      padding-left: 54px;
+      position: relative;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  }
+}
+
+// default theme
+
+.slinky-theme-default {
+  background: #ffffff;
+
+  .title {
+    color: #333;
+    padding: 1em;
+  }
+
+  li {
+    line-height: 1;
+  }
+
+  a:not(.back) {
+    color: #333;
+    padding: 9px 24px;
+    height: 56px;
+
+    &:hover {
+      background: rgba(134, 26, 34, 0.25);
+    }
+
+    &:active {
+      background: rgba(134, 26, 34, 0.25);
+    }
+  }
+
+  .next::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #757575;
+    border-bottom: 2px solid #757575;
+    transform: rotate(-45deg);
+  }
+  .back {
+    &:hover {
+      background: rgba(134, 26, 34, 0.25);
+    }
+
+    &:active {
+      background: rgba(134, 26, 34, 0.25);
+    }
+  }
+  .back::before {
+    position: absolute;
+    left: 25px;
+    top: 22px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #757575;
+    border-bottom: 2px solid #757575;
+    transform: rotate(135deg);
+  }
+  .back::after {
+    position: absolute;
+    left: 25px;
+    top: 26px;
+    content: '';
+    width: 11px;
+    height: 2px;
+    border: none;
+    background: #757575;
+  }
+
+  .next::after {
+    margin-left: 1em;
+  }
+
+
+
+  .next:hover::after,
+  .back:hover::before {
+    opacity: 0.75;
+  }
+
+  .next:active::after,
+  .back:active::before {
+    opacity: 1;
+  }
+}
