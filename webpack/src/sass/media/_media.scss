@@ -1,0 +1,36 @@
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .main_form__logo {
+    margin: 24px 0 57px 0;
+  }
+  .main_form__title {
+    margin-bottom: 0;
+  }
+  .main_form__text {
+    max-width: 343px;
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 320px){
+  .main_form {
+    padding: 10px;
+  }
+
+  .main_form__group_button {
+    button {
+      width: 100%;
+    }
+  }
+}
