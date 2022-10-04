@@ -9,6 +9,7 @@ import './sass/main.scss';
 // import './js/ex-inline-extentions.js';
 require('../../js/main.js');
 
+
 //добавление VUE
 // import Vue from 'vue';
 // global.Vue = Vue;

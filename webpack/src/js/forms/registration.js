@@ -8,96 +8,43 @@ const initRegister = () => {
         this.passwordPattern = /^[a-zA-Z0-9-_@]{6,}$/;
     };
 
-    registrationApp.prototype.init = function () {/*
-        var self = this;
-        $(document).on('keyup', '#register_phis_login', function () {
-            var emailpattern = self.emailPattern;
-            var login = $("#register_phis_login").val();
-            if (emailpattern.test(login)) {
-                var param = $('#register_phis_form').serialize();
-                $.post(
-                    '/ajax/doRegister.php?check=yes&' + 'RND=' + Math.random(),
-                    param,
-                    function (data) {
-                        if (data == 'userexist') {
-                            $("input#register_phis_login").addClass('error');
-
-                            if ($('span[for="register_phis_login"]').length) {
-                                $('span[for="register_phis_login"]').remove();
-                            }
-                            $("input#register_phis_login").after('<span class="error" for="register_phis_login">Пользователь уже существует</span>');
-                        }
-                        else {
-                            $('span[for="register_phis_login"]').remove();
-                            $("input#register_phis_login").removeClass('error');
-                        }
-                    }
-                )
-            }
-            return false;
-        });
-
-        $(document).on('keyup', '#register_org_login', function () {
-            var emailpattern = self.emailPattern;
-            var login = $("#register_org_login").val();
-            if (emailpattern.test(login)) {
-                var param = $('#register_org_form').serialize();
-                $.post(
-                    '/ajax/doRegister.php?check=yes&' + 'RND=' + Math.random(),
-                    param,
-                    function (data) {
-                        if (data == 'userexist') {
-                            $("input#register_org_login").addClass('error');
-
-                            if ($('span[for="register_org_login"]').length) {
-                                $('span[for="register_org_login"]').remove();
-                            }
-                            $("input#register_org_login").after('<span class="error" for="register_org_login">Пользователь уже существует</span>');
-                        }
-                        else {
-                            $('span[for="register_org_login"]').remove();
-                            $("input#register_org_login").removeClass('error');
-                        }
-                    }
-                )
-            }
-            return false;
-        });*/
-    };
-
     registrationApp.prototype.sendPhisRegister = function () {
         var self = this;
 
-        var param = $('#register_phis_form').serialize();
+        var param = $('.registration__form').serialize();
 
 
 
-        var login = $("#register_phis_login").val();
-        var phone = $("#register_phis_phone").val();
-        var password = $("#register_phis_password").val();
-        var rules = $("#register_phis_rules").is(":checked");
-        register_form_data['email'] = login;
-        register_form_data['phone'] = phone;
+        var surname = $(".registration__input-surname").val();
+        var name = $(".registration__input-name").val();
+        var tabel_number = $(".registration__input-tabel-number").val();
+        var apple_id = $(".registration__apple-id").val();
+        var email = $(".registration__input-email").val();
+
+
+        var rules = $(".registration__form").is(":checked");
+        register_form_data['email'] = email;
+        // register_form_data['phone'] = phone;
         var emailpattern = self.emailPattern,
             phonepattern = self.phonePattern,
             passwordpattern = self.passwordPattern;
 
-        if (!rules) {
-            $("#register_phis_rules_text").removeClass("display-none");
-            $("#register_phis_rules_text").show();
-        }
-        else {
-            $("#register_phis_rules_text").addClass("display-none");
-            $("#register_phis_rules_text").hide();
+        // if (!rules) {
+        //     $("#register_phis_rules_text").removeClass("display-none");
+        //     $("#register_phis_rules_text").show();
+        // }
+        // else {
+        //     $("#register_phis_rules_text").addClass("display-none");
+        //     $("#register_phis_rules_text").hide();
+        // }
+
+        if (!emailpattern.test(email)) {
+            $("input.registration__input-email").addClass('error');
         }
 
-        if (!emailpattern.test(login)) {
-            $("input#register_phis_login").addClass('error');
-        }
-
-        if (!phonepattern.test(phone)) {
-            $("input#register_phis_phone").addClass('error');
-        }
+        // if (!phonepattern.test(phone)) {
+        //     $("input#register_phis_phone").addClass('error');
+        // }
 
 
 
