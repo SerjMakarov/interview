@@ -134,10 +134,9 @@ body {
     height: 56px;
     border: 1px solid #DADADA;
     border-radius: 4px;
-  }
-  input:nth-child(-n+4) {
     margin-bottom: 32px;
   }
+
 }
 
 .registration__group-button {
@@ -193,7 +192,7 @@ body {
   padding: 16px 51px;
 }
 
-.interview:nth-child(-n+6) {
+.interview:nth-child(-n+11) {
   margin-bottom: 16px;
 }
 
@@ -212,24 +211,48 @@ body {
   }
 }
 
+.interview__title_margin_null {
+  margin-bottom: 0;
+}
+
 .interview-form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.hidden{
+  display: none;
+}
+
 .interview-form__element {
   display: flex;
   justify-content: space-between;
+  margin: 10px 0 10px 0;
+
 }
 
-.interview-form__element:nth-child(-n+2) {
-  margin-bottom: 16px;
-}
+//.interview-form__element:nth-child(-n+5) {
+//  margin-bottom: 16px;
+//}
 
 .interview-form__message {
   padding: 10px 0 0 10px;
   margin: 24px 0 16px 0;
+  border: 1px solid #DADADA;
+  border-radius: 4px;
+  background: #F8F8F8;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #838A92;
+}
+
+.interview-form__text-input{
+  width: 861px;
+  height: 56px;
+  padding: 5px 10px;
   border: 1px solid #DADADA;
   border-radius: 4px;
   background: #F8F8F8;

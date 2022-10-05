@@ -16,6 +16,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/header.php'
         </p>
     </div>
     <form class="registration__form">
+        <input v-model="version_os" type="text" placeholder="Версия OS*" @input="getValue">
+        <input v-model="device_model" type="text" placeholder="Модель телефона*" @input="getValue">
         <input v-model="surname" type="text" placeholder="Фамилия*" @input="getValue">
         <input v-model="name" type="text" placeholder="Имя*" @input="getValue">
         <input v-model="tabel_number" type="text" placeholder="Табельный номер*" @input="getValue">
